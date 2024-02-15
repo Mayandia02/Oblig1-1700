@@ -30,6 +30,13 @@ let ticketArray = []
         }
         document.getElementById("utInfo").innerHTML = ut;
 
+        document.getElementById("fornavn").value = "";
+        document.getElementById("etternavn").value = "";
+        document.getElementById("telefonnr").value = "";
+        document.getElementById("epost").value = "";
+        document.getElementById("antall").value = "";
+        document.getElementById("velgFilm").value = "";
+
         return false;
     }
 
