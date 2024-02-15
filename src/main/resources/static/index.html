@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Kino hjemmeside</title>
+    <script type="text/javascript" src="bestillbillett.js"></script>
+</head>
+    <body>
+        <h1>Bestilling av kinobilletter</h1>
+        <form id="comprarbilletas" onsubmit="return visBilletter()">
+            <label for="velgFilm">Velg film: </label>
+            <select id="velgFilm" name="velgFilm" required>
+                <option value="none"selected disabled hidden>Velg film her</option>
+                <option value="film1">Ringenes Herre</option>
+                <option value="film2">Ringenes Herre 2</option>
+                <option value="film3">Ringenes Herre 3</option>
+            </select>
+    <br>
+
+    <br><br>
+    <label for="antall">Antall</label>
+    <input type="number" id="antall" name="antall">
+    <br><br>
+
+    <label for="fornavn">Fornavn: </label>
+    <input type="text" id="fornavn" name="fornavn" required maxlength="20">
+    <div id="feilmeldingFornavn"></div>
+        <label for="etternavn">Etternavn: </label>
+    <input type="text" id="etternavn" name="etternavn" onsubmit="sjekkNavn()">
+    <div id="feilmeldingEtternavn"></div>
+    <label for="telefonnr">Telefonnr: </label>
+    <input type="number" id="telefonnr" name="telefonnr" pattern="[0-9]{8}" onsubmit="sjekkTnr()">
+    <div id="ugyldigNr"></div>
+    <label for="epost">Epost: </label>
+    <input type="text" id="epost" name="epost" onsubmit="sjekkEpost()">
+    <div id="uglydigEpost"></div>
+
+    <button type="submit" name="Kjøp billett">Kjøp billett</button>
+        </form>
+    <h2>Alle billetter: </h2>
+    <div id="utInfo"></div>
+
+    <input type="button" onclick="slettBillett()" value="Slett alle billettene">
+    </body>
+</html>
