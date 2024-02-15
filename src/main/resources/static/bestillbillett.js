@@ -29,6 +29,8 @@ let ticketArray = []
             ut += "</tr>"
         }
         document.getElementById("utInfo").innerHTML = ut;
+
+        return false;
     }
 
 function slettBillett(){
@@ -42,7 +44,7 @@ function sjekkEpost(epost){
     if (epost.value.match(at)){
         return true;
     }else {
-        document.getElementById("errorMessageEmail").innerHTML="<b>Ugyldig email</b>";
+        document.getElementById("uglydigEpost").innerHTML="<b>Ugyldig email</b>";
         return false;
     }
 }
