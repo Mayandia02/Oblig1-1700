@@ -24,7 +24,7 @@
     <br><br>
 
     <label for="fornavn">Fornavn: </label>
-    <input type="text" id="fornavn" name="fornavn" required maxlength="20">
+    <input type="text" id="fornavn" name="fornavn" onsubmit="sjekkNavn()">
     <div id="feilmeldingFornavn"></div>
         <label for="etternavn">Etternavn: </label>
     <input type="text" id="etternavn" name="etternavn" onsubmit="sjekkNavn()">
